@@ -1,0 +1,115 @@
+/* Fonts ------------------------------------------------------------- */
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-display: swap; /* swap to the fallback font until the custom font is loaded */
+}
+
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-RegularItalic";
+  src: url("/fonts/Gilroy-RegularItalic.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("/fonts/Gilroy-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Norms Pro";
+  src: url("/fonts/TTNormsProVariable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Variables -------------------------------------------------------- */
+:root {
+  --light-blue: #EDF4FF;
+  --blue: #4E2FD2;
+  --green: #0AA288;
+  --disabled-color: #F1F1F2;
+  --text-color: #1F1F1FBF;
+  --header-color: #0B0D10;
+  --step-label-color: #484848;
+  --price-color: #575757;
+  --review-step-title-color: #A8B2BD;
+  --border-selected-color: #4E2FD2B2;
+  --trans: 0.3s;
+  --fontSize-regular: 16px;
+}
+
+/* Globals ---------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: var(--fontSize-regular);
+  color: var(--text-color);
+}
+
+input, button, select, textarea {
+  font: inherit;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
