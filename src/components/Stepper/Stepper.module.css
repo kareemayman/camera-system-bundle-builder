@@ -1,0 +1,66 @@
+.stepper {
+  --btn-size: 20px;
+  --btn-radius: 4px;
+  --btn-border-width: 2px;
+  --btn-bg: #f0f4f7;
+  --btn-border: #f0f4f7; /* same as bg → invisible, keeps size equal to disabled */
+  --icon: #525963;
+  --btn-bg-disabled: #fff;
+  --btn-border-disabled: #e6ebf0;
+  --icon-disabled: #ced6de;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-block: 4px;
+}
+
+/* Review-panel variant: darker fill, thinner border, constant icon color. */
+.review {
+  --btn-border-width: 1px;
+  --btn-bg: #fff;
+  --btn-border: #ced6de;
+  --icon: #575757;
+  --btn-bg-disabled: #f1f1f2;
+  --btn-border-disabled: #ced6de;
+  --icon-disabled: #575757;
+}
+
+.btn {
+  width: var(--btn-size);
+  height: var(--btn-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--btn-radius);
+  background: var(--btn-bg);
+  border: var(--btn-border-width) solid var(--btn-border);
+  color: var(--icon);
+  transition: background var(--trans), border-color var(--trans), color var(--trans);
+}
+
+.btn:disabled {
+  background: var(--btn-bg-disabled);
+  border-color: var(--btn-border-disabled);
+  color: var(--icon-disabled);
+  cursor: default;
+}
+
+.icon {
+  width: 8px;
+  height: auto;
+}
+
+.count {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--header-color);
+  text-align: center;
+}
+
+.review .count {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}

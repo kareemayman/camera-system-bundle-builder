@@ -1,0 +1,11 @@
+// Exported from Figma (8×10). fill="currentColor" so CSS controls the color.
+export default function MinusIcon(props) {
+  return (
+    <svg viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        d="M7.33333 5.6H0.666667C0.489856 5.6 0.320286 5.51571 0.195262 5.36569C0.0702379 5.21566 0 5.01217 0 4.8C0 4.58783 0.0702379 4.38434 0.195262 4.23431C0.320286 4.08429 0.489856 4 0.666667 4H7.33333C7.51014 4 7.67971 4.08429 7.80474 4.23431C7.92976 4.38434 8 4.58783 8 4.8C8 5.01217 7.92976 5.21566 7.80474 5.36569C7.67971 5.51571 7.51014 5.6 7.33333 5.6Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
