@@ -1,0 +1,271 @@
+.panel {
+  flex: none;
+  width: 399px;
+  max-width: 100%;
+  padding-top: 15px;
+  background: var(--light-blue);
+  border-radius: 10px;
+}
+
+.eyebrow {
+  padding-inline: 20px;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--step-label-color);
+  margin-bottom: 5px;
+}
+
+.content {
+  padding: 20px 20px 31px;
+}
+
+/* Header ----------------------------------------------------------------- */
+.header {
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  color: #1f1f1f;
+  margin-bottom: 5px;
+}
+
+.desc {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0.6px;
+  color: var(--text-color);
+}
+
+/* Sections --------------------------------------------------------------- */
+.section {
+  border-top: 1px solid #ced6de;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.sectionLabel {
+  font-family: "Gilroy-Regular", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.36px;
+  text-transform: uppercase;
+  color: var(--review-step-title-color);
+  margin-bottom: 8px;
+}
+
+/* Line item -------------------------------------------------------------- */
+.line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.lineLeft {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+}
+
+.thumb {
+  width: 41px;
+  height: 41px;
+  flex: none;
+  margin-right: 12px;
+  border-radius: 5px;
+  background: #fff;
+  object-fit: contain;
+}
+
+.thumbIcon {
+  width: 41px;
+  height: 41px;
+  flex: none;
+  margin-right: 12px;
+}
+
+.lineTitle {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.07px;
+  color: var(--header-color);
+}
+
+.lineRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.prices {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.compare {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.07px;
+  text-align: right;
+  text-decoration: line-through;
+  color: #6f7882;
+}
+
+.amount {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.07px;
+  text-align: right;
+  color: var(--blue);
+}
+
+/* Plan line -------------------------------------------------------------- */
+.planLogo {
+  width: 20px;
+  height: 23.7px;
+  flex: none;
+  margin-right: 3px;
+  object-fit: contain;
+}
+
+.planTitle {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: -0.03px;
+  color: #000;
+}
+
+.planHighlight {
+  color: var(--blue);
+}
+
+/* Checkout block --------------------------------------------------------- */
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.satBadge {
+  width: 78px;
+  height: 78px;
+  flex: none;
+}
+
+.summaryRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.lowAs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 113px;
+  min-height: 18px;
+  padding: 5px 8px;
+  border-radius: 3px;
+  background: var(--blue);
+  color: #fff;
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: -0.6px;
+  text-align: center;
+}
+
+.totalPrices {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.totalCompare {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: 0.045px;
+  text-decoration: line-through;
+  color: #6f7882;
+}
+
+.totalAmount {
+  font-family: "Gilroy-Bold", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.03px;
+  color: var(--blue);
+}
+
+.checkoutArea {
+  padding-top: 10px;
+}
+
+.congrats {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: -0.06px;
+  text-align: center;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 48px;
+  margin-bottom: 8px;
+  padding: 13px 16px;
+  border-radius: 4px;
+  background: var(--blue);
+  color: #fff;
+  font-family: "TT Norms Pro", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  transition: filter var(--trans);
+}
+
+.checkout:hover {
+  filter: brightness(0.92);
+}
+
+.saveLink {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Gilroy-RegularItalic", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: -0.02px;
+  text-decoration: underline;
+  color: var(--step-label-color);
+}

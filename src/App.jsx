@@ -1,21 +1,12 @@
-import productsData from "./data/products.json";
-import Step from "./components/Step/Step.jsx";
+import Builder from "./components/Builder/Builder.jsx";
+import ReviewPanel from "./components/ReviewPanel/ReviewPanel.jsx";
+import styles from "./App.module.css";
 
-// TEMPORARY scaffolding to verify the accordion Step in the browser.
-// Replaced by the real Builder + ReviewPanel shell later.
 export default function App() {
-  const { steps } = productsData;
-
   return (
-    <div style={{ maxWidth: 1000, margin: "0 auto", padding: 24 }}>
-      {steps.map((step, i) => (
-        <Step
-          key={step.id}
-          step={step}
-          totalSteps={steps.length}
-          nextStep={steps[i + 1] ?? null}
-        />
-      ))}
+    <div className={styles.shell}>
+      <Builder />
+      <ReviewPanel />
     </div>
   );
 }

@@ -1,0 +1,11 @@
+/* Shell: builder (left) + review (right). Content width is 1196px
+   (builder 768 + gap 29 + review 399); max-width 1244 accounts for the
+   24px side padding, giving the design's ~122px margins at 1440px. */
+.shell {
+  display: flex;
+  align-items: flex-start;
+  gap: 29px;
+  max-width: 1244px;
+  margin-inline: auto;
+  padding: 49px 24px;
+}

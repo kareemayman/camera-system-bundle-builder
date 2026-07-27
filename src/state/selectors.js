@@ -75,6 +75,10 @@ export function getLineItems(quantities) {
           required: !!product.required,
           quantity,
           lineTotal: round2(product.price * quantity),
+          lineCompareTotal:
+            product.compareAtPrice != null
+              ? round2(product.compareAtPrice * quantity)
+              : null,
         });
       }
     }
