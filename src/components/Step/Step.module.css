@@ -1,0 +1,115 @@
+.eyebrow {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--step-label-color);
+  margin-bottom: 5px;
+  padding: 13px 15px 0;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3px;
+  padding: 20px 15px;
+  border-top: 0.5px solid #1f1f1f;
+  border-bottom: 0.5px solid #1f1f1f;
+  text-align: left;
+  transition: border-color var(--trans);
+}
+
+.open {
+  background: var(--light-blue);
+  border-radius: 10px;
+}
+
+/* keep the 0.5px so opening doesn't shift the row; just hide the color */
+.open .header {
+  border-bottom-color: transparent;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  width: 26px;
+  height: 26px;
+  flex: none;
+}
+
+.title {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--header-color);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.count {
+  font-family: "Gilroy-Medium", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  color: var(--blue);
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+  flex: none;
+  color: var(--blue);
+  transition: transform var(--trans);
+}
+
+.open .chevron {
+  transform: rotate(180deg);
+}
+
+.body {
+  padding: 0 15px 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 39px;
+  margin: 15px auto 0;
+  padding: 5px 24px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  background: #fff;
+  color: var(--blue);
+  font-family: "Gilroy-SemiBold", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  transition: background var(--trans), color var(--trans);
+}
+
+.next:hover {
+  background: var(--blue);
+  color: #fff;
+}
