@@ -88,58 +88,68 @@ export default function ReviewPanel() {
       <p className={styles.eyebrow}>Review</p>
 
       <div className={styles.content}>
-        <header className={styles.header}>
-          <h2 className={styles.title}>Your security system</h2>
-          <p className={styles.desc}>
-            Review your personalized protection system designed to keep what matters most safe.
-          </p>
-        </header>
+        <div className={styles.lines}>
+          <header className={styles.header}>
+            <h2 className={styles.title}>Your security system</h2>
+            <p className={styles.desc}>
+              Review your personalized protection system designed to keep what matters most safe.
+            </p>
+          </header>
 
-        <div className={styles.sections}>
-          {groups.map((group) => (
-            <Section key={group.category} label={group.label}>
-              {group.category === "plan"
-                ? group.items.map((item) => <PlanLine key={item.variantId} item={item} />)
-                : group.items.map((item) => <ReviewLine key={item.variantId} item={item} />)}
+          <div className={styles.sections}>
+            {groups.map((group) => (
+              <Section key={group.category} label={group.label}>
+                {group.category === "plan"
+                  ? group.items.map((item) => <PlanLine key={item.variantId} item={item} />)
+                  : group.items.map((item) => <ReviewLine key={item.variantId} item={item} />)}
+              </Section>
+            ))}
+
+            <Section>
+              <ShippingLine shipping={reviewExtras.shipping} />
             </Section>
-          ))}
-
-          <Section>
-            <ShippingLine shipping={reviewExtras.shipping} />
-          </Section>
-        </div>
-
-        <div className={styles.summaryRow}>
-          <img
-            className={styles.satBadge}
-            src={reviewExtras.guaranteeBadge}
-            alt={reviewExtras.guarantee}
-          />
-          <div className={styles.summaryRight}>
-            <span className={styles.lowAs}>
-              as low as {formatPrice(totals.monthlyFinancing)}/mo
-            </span>
-            <div className={styles.totalPrices}>
-              <span className={styles.totalCompare}>{formatPrice(totals.compareAtTotal)}</span>
-              <span className={styles.totalAmount}>{formatPrice(totals.total)}</span>
-            </div>
           </div>
         </div>
 
-        <div className={styles.checkoutArea}>
-          <p className={styles.congrats}>
-            Congrats! You&apos;re saving {formatPrice(totals.savings)} on your security bundle!
-          </p>
-          <button
-            type="button"
-            className={styles.checkout}
-            onClick={() => alert("This is a prototype — checkout isn't implemented.")}
-          >
-            Checkout
-          </button>
-          <button type="button" className={styles.saveLink} onClick={saveForLater}>
-            Save my system for later
-          </button>
+        <div className={styles.checkout}>
+          <div className={styles.summaryRow}>
+            <div className={styles.guarantee}>
+              <img
+                className={styles.satBadge}
+                src={reviewExtras.guaranteeBadge}
+                alt={reviewExtras.guarantee}
+              />
+              <div className={styles.returns}>
+                <p className={styles.returnsTitle}>{reviewExtras.returnsTitle}</p>
+                <p className={styles.returnsText}>{reviewExtras.returnsText}</p>
+              </div>
+            </div>
+            <div className={styles.totals}>
+              <span className={styles.lowAs}>
+                as low as {formatPrice(totals.monthlyFinancing)}/mo
+              </span>
+              <div className={styles.totalPrices}>
+                <span className={styles.totalCompare}>{formatPrice(totals.compareAtTotal)}</span>
+                <span className={styles.totalAmount}>{formatPrice(totals.total)}</span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.checkoutArea}>
+            <p className={styles.congrats}>
+              Congrats! You&apos;re saving {formatPrice(totals.savings)} on your security bundle!
+            </p>
+            <button
+              type="button"
+              className={styles.checkoutBtn}
+              onClick={() => alert("This is a prototype — checkout isn't implemented.")}
+            >
+              Checkout
+            </button>
+            <button type="button" className={styles.saveLink} onClick={saveForLater}>
+              Save my system for later
+            </button>
+          </div>
         </div>
       </div>
     </aside>

@@ -9,3 +9,13 @@
   margin-inline: auto;
   padding: 49px 24px;
 }
+
+/* Tablet: stack the columns (review below builder), both full width. */
+@media (max-width: 1244px) {
+  .shell {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 33.58px;
+    max-width: none;
+  }
+}

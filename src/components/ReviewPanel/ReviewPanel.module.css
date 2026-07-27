@@ -20,7 +20,14 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
   padding: 20px 20px 31px;
+}
+
+.lines,
+.checkout {
+  min-width: 0;
 }
 
 /* Header ----------------------------------------------------------------- */
@@ -169,13 +176,23 @@
   margin-bottom: 4px;
 }
 
+.guarantee {
+  display: flex;
+  align-items: center;
+}
+
 .satBadge {
   width: 78px;
   height: 78px;
   flex: none;
 }
 
-.summaryRight {
+/* returns copy is tablet-only */
+.returns {
+  display: none;
+}
+
+.totals {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -236,7 +253,7 @@
   margin-bottom: 4px;
 }
 
-.checkout {
+.checkoutBtn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,7 +271,7 @@
   transition: filter var(--trans);
 }
 
-.checkout:hover {
+.checkoutBtn:hover {
   filter: brightness(0.92);
 }
 
@@ -268,4 +285,120 @@
   letter-spacing: -0.02px;
   text-decoration: underline;
   color: var(--step-label-color);
+}
+
+/* Tablet: panel spans the full width below the builder. */
+@media (max-width: 1244px) {
+  .panel {
+    width: 100%;
+  }
+}
+
+/* Tablet: review splits into two columns (lines | checkout); eyebrow hidden,
+   type scales up, prices go horizontal, and the returns copy appears. */
+@media (min-width: 768px) and (max-width: 1244px) {
+  .eyebrow {
+    display: none;
+  }
+
+  .panel {
+    padding-top: 0;
+  }
+
+  .content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 52px;
+    padding: 35px 61.5px 31px;
+  }
+
+  .lines,
+  .checkout {
+    flex: 1;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 16px;
+  }
+
+  .prices {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .compare,
+  .amount {
+    font-size: 16px;
+  }
+
+  .summaryRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .satBadge {
+    width: 131px;
+    height: 131px;
+    margin-right: 25px;
+  }
+
+  .returns {
+    display: block;
+    padding-block: 25.5px;
+  }
+
+  .returnsTitle {
+    font-family: "Gilroy-SemiBold", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.6px;
+    color: #1f1f1f;
+    margin-bottom: 30px;
+  }
+
+  .returnsText {
+    font-family: "Gilroy-Regular", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.1;
+    letter-spacing: 0.6px;
+    color: #1f1f1f;
+  }
+
+  .totals {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lowAs {
+    min-width: 145px;
+    min-height: 27px;
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .totalPrices {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .totalCompare {
+    font-size: 22px;
+  }
+
+  .totalAmount {
+    font-size: 28px;
+  }
+
+  .congrats {
+    font-size: 14px;
+  }
 }
