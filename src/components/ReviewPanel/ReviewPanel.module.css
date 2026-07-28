@@ -402,3 +402,33 @@
     font-size: 14px;
   }
 }
+
+/* Mobile: single column (base layout); smaller eyebrow, description, and
+   line/plan type. The checkout block matches desktop. */
+@media (max-width: 767px) {
+  .eyebrow {
+    font-size: 10px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .lineTitle {
+    font-size: 12px;
+  }
+
+  .compare,
+  .amount {
+    font-size: 12px;
+  }
+
+  .planLogo {
+    width: 14px;
+    height: 17px;
+  }
+
+  .planTitle {
+    font-size: 14px;
+  }
+}

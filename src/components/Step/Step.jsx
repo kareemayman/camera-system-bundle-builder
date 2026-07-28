@@ -31,7 +31,7 @@ export default function Step({ step, totalSteps, nextStep }) {
         </span>
 
         <span className={styles.right}>
-          {open && <span className={styles.count}>{count} selected</span>}
+          <span className={styles.count}>{count} selected</span>
           <ChevronIcon className={styles.chevron} />
         </span>
       </button>

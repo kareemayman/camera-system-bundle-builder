@@ -60,12 +60,18 @@
 }
 
 .count {
+  display: none;
   font-family: "Gilroy-Medium", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   color: var(--blue);
+}
+
+/* desktop/tablet: the count shows only on the open step */
+.open .count {
+  display: block;
 }
 
 .chevron {
@@ -123,5 +129,27 @@
 
   .title {
     font-size: 28px;
+  }
+}
+
+/* Mobile: smaller icon + title, tighter eyebrow, and the count shows on every
+   step (not just the open one). */
+@media (max-width: 767px) {
+  .eyebrow {
+    font-size: 10px;
+    padding-top: 5px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .count {
+    display: block;
   }
 }

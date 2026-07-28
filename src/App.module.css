@@ -10,6 +10,11 @@
   padding: 49px 24px;
 }
 
+/* "Let's get started!" heading — mobile only. */
+.pageTitle {
+  display: none;
+}
+
 /* Tablet: stack the columns (review below builder), both full width. */
 @media (max-width: 1244px) {
   .shell {
@@ -17,5 +22,28 @@
     align-items: stretch;
     gap: 33.58px;
     max-width: none;
+  }
+}
+
+/* Mobile: full-bleed (no side padding), 31px block padding, page title shown. */
+@media (max-width: 767px) {
+  .page {
+    padding: 31px 0 0;
+  }
+
+  .shell {
+    gap: 0;
+    padding: 0;
+  }
+
+  .pageTitle {
+    display: block;
+    text-align: center;
+    font-family: "Gilroy-Bold", sans-serif;
+    font-weight: 400;
+    font-size: 31.8px;
+    letter-spacing: -0.06px;
+    color: #1F1F1F;
+    margin-bottom: 20px;
   }
 }
