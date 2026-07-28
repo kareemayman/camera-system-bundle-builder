@@ -118,12 +118,16 @@
   font-family: "Gilroy-SemiBold", sans-serif;
   font-size: 18px;
   line-height: 24px;
-  transition: background var(--trans), color var(--trans);
+  transition: background var(--trans), color var(--trans), transform var(--trans-fast);
 }
 
 .next:hover {
   background: var(--blue);
   color: #fff;
+}
+
+.next:active {
+  transform: scale(0.98);
 }
 
 /* Tablet: larger step icon + title. */
