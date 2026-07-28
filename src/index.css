@@ -40,6 +40,7 @@
 :root {
   --light-blue: #EDF4FF;
   --blue: #4E2FD2;
+  --blue-dark: #3D22A6;
   --green: #0AA288;
   --disabled-color: #F1F1F2;
   --text-color: #1F1F1FBF;
@@ -90,4 +91,35 @@ button {
 
 ul {
   list-style: none;
+}
+
+/* Selection + scrollbars — tinted to the app's blue theme */
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) var(--light-blue); /* thumb + track */
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue-dark);
 }
