@@ -50,6 +50,7 @@
   --review-step-title-color: #A8B2BD;
   --border-selected-color: #4E2FD2B2;
   --trans: 0.3s;
+  --trans-fast: 0.12s;
   --fontSize-regular: 16px;
 }
 

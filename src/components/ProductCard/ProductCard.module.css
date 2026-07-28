@@ -8,11 +8,19 @@
   background: #fff;
   border-radius: 10px;
   border: 2px solid transparent;
-  transition: border-color var(--trans);
+  transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
 }
 
 .selected {
   border-color: var(--border-selected-color);
+}
+
+/* Hover lift — pointer devices only, so it doesn't stick after a tap. */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(17, 17, 17, 0.1);
+  }
 }
 
 /* Media / image (left) --------------------------------------------------- */

@@ -20,7 +20,7 @@
   border-top: 0.5px solid #1f1f1f;
   border-bottom: 0.5px solid #1f1f1f;
   text-align: left;
-  transition: border-color var(--trans);
+  transition: background var(--trans), border-color var(--trans);
 }
 
 .open {
@@ -31,6 +31,12 @@
 /* keep the 0.5px so opening doesn't shift the row; just hide the color */
 .open .header {
   border-bottom-color: transparent;
+}
+
+@media (hover: hover) {
+  .header:hover {
+    background: var(--light-blue);
+  }
 }
 
 .left {

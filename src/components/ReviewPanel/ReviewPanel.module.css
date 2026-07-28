@@ -268,11 +268,15 @@
   font-weight: 700;
   font-size: 17px;
   line-height: 1;
-  transition: filter var(--trans);
+  transition: filter var(--trans), transform var(--trans-fast);
 }
 
 .checkoutBtn:hover {
   filter: brightness(0.92);
+}
+
+.checkoutBtn:active {
+  transform: scale(0.98);
 }
 
 .saveLink {

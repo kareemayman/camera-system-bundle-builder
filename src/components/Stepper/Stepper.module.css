@@ -36,14 +36,20 @@
   background: var(--btn-bg);
   border: var(--btn-border-width) solid var(--btn-border);
   color: var(--icon);
-  transition: background var(--trans), border-color var(--trans), color var(--trans);
+  transition: background var(--trans), border-color var(--trans), color var(--trans),
+    transform var(--trans-fast);
 }
 
 .btn:disabled {
   background: var(--btn-bg-disabled);
   border-color: var(--btn-border-disabled);
   color: var(--icon-disabled);
-  cursor: default;
+  cursor: not-allowed;
+}
+
+/* Tactile press — floor/required buttons are disabled and stay still. */
+.btn:active:not(:disabled) {
+  transform: scale(0.88);
 }
 
 .icon {
