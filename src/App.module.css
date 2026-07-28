@@ -8,6 +8,19 @@
   max-width: 1244px;
   margin-inline: auto;
   padding: 49px 24px;
+  animation: fadeInUp 0.5s ease 0.08s both;
+}
+
+/* Page-load entrance — the title (mobile) leads, then the shell rises in. */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* "Let's get started!" heading — mobile only. */
@@ -45,5 +58,6 @@
     letter-spacing: -0.06px;
     color: #1F1F1F;
     margin-bottom: 20px;
+    animation: fadeInUp 0.5s ease both;
   }
 }

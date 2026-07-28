@@ -1,3 +1,4 @@
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useBundle } from "../../state/BundleContext.js";
 import { formatPrice } from "../../state/selectors";
 import Stepper from "../Stepper/Stepper.jsx";
@@ -6,8 +7,9 @@ import styles from "./ReviewPanel.module.css";
 
 // A category section: top border + optional uppercase label + its rows.
 function Section({ label, children }) {
+  const [parent] = useAutoAnimate();
   return (
-    <div className={styles.section}>
+    <div className={styles.section} ref={parent}>
       {label && <p className={styles.sectionLabel}>{label}</p>}
       {children}
     </div>
@@ -82,6 +84,7 @@ function ShippingLine({ shipping }) {
 
 export default function ReviewPanel() {
   const { groups, reviewExtras, totals, saveForLater } = useBundle();
+  const [sectionsRef] = useAutoAnimate();
 
   return (
     <aside className={styles.panel}>
@@ -96,7 +99,7 @@ export default function ReviewPanel() {
             </p>
           </header>
 
-          <div className={styles.sections}>
+          <div className={styles.sections} ref={sectionsRef}>
             {groups.map((group) => (
               <Section key={group.category} label={group.label}>
                 {group.category === "plan"

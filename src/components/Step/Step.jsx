@@ -1,3 +1,4 @@
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useBundle } from "../../state/BundleContext.js";
 import ChevronIcon from "../icons/ChevronIcon.jsx";
 import StepIcon from "../icons/StepIcon.jsx";
@@ -9,12 +10,16 @@ import styles from "./Step.module.css";
 // product cards plus a "Next: …" button that advances to the following step.
 export default function Step({ step, totalSteps, nextStep }) {
   const { openStep, toggleStep, setOpenStep, stepCounts } = useBundle();
+  const [parent] = useAutoAnimate();
 
   const open = openStep === step.id;
   const count = stepCounts[step.id];
 
   return (
-    <section className={open ? `${styles.step} ${styles.open}` : styles.step}>
+    <section
+      ref={parent}
+      className={open ? `${styles.step} ${styles.open}` : styles.step}
+    >
       <p className={styles.eyebrow}>
         Step {step.step} of {totalSteps}
       </p>
