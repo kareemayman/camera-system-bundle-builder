@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useBundle } from "../../state/BundleContext.js";
 import { formatPrice } from "../../state/selectors";
@@ -145,11 +146,18 @@ export default function ReviewPanel() {
             <button
               type="button"
               className={styles.checkoutBtn}
-              onClick={() => alert("This is a prototype — checkout isn't implemented.")}
+              onClick={() => toast.success("Checkout complete! (not really, this is a demo)")}
             >
               Checkout
             </button>
-            <button type="button" className={styles.saveLink} onClick={saveForLater}>
+            <button
+              type="button"
+              className={styles.saveLink}
+              onClick={() => {
+                saveForLater();
+                toast.success("Your system's been saved");
+              }}
+            >
               Save my system for later
             </button>
           </div>
