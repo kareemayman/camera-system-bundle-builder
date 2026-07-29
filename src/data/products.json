@@ -93,6 +93,7 @@
           "learnMoreUrl": "#",
           "badge": null,
           "perMonth": true,
+          "max": 1,
           "compareAtPrice": 12.99,
           "price": 9.99,
           "variants": [

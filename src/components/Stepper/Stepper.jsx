@@ -11,12 +11,15 @@ export default function Stepper({ variantId, mode = "card" }) {
   const { quantities, increment, decrement } = useBundle();
 
   const quantity = quantities[variantId] ?? 0;
-  const required = !!variantIndex[variantId]?.product.required;
+  const product = variantIndex[variantId]?.product;
+  const required = !!product?.required;
+  const max = product?.max ?? Infinity;
 
-  // Can't go below the floor (0, or 1 for required). Required items are fixed,
-  // so both buttons are disabled — matching the greyed Hub stepper in the design.
+  // Floor: 0, or 1 for required (the Hub is fixed, so both buttons disable —
+  // matching its greyed stepper in the design). Ceiling: a product's `max`
+  // (the plan caps at 1 — a subscription is 0-or-1, not a quantity).
   const minusDisabled = required || quantity <= minQuantity(variantId);
-  const plusDisabled = required;
+  const plusDisabled = required || quantity >= max;
 
   const className = mode === "review" ? `${styles.stepper} ${styles.review}` : styles.stepper;
 
